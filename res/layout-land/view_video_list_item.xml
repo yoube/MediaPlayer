@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/video_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <SurfaceView
+                android:id="@+id/video_surface"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ProgressBar
+                android:id="@+id/video_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_centerInParent="true"
+                />
+
+            <RelativeLayout
+                android:id="@+id/video_tool_rl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true" 
+                android:background="#95000000"
+                android:visibility="gone"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+
+                <ImageView
+                    android:id="@+id/video_tool_play_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:src="@drawable/night_biz_audio_btn_pause"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="10dp"
+                    />
+                <ImageView 
+                    android:id="@+id/video_tool_expand"
+                    android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:src="@drawable/biz_video_expand"
+					android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="10dp"
+                    />
+                
+                <SeekBar 
+                    android:id="@+id/video_tool_seetbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" 
+                    android:layout_toRightOf="@id/video_tool_play_img"
+                    android:layout_toLeftOf="@id/video_tool_expand"
+                    style="?android:attr/seekBarStyle"
+                    android:layout_centerVertical="true"
+                    />
+                
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/video_img_rl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/biz_profile_head_bg" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/biz_live_news_item_video" />
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>
